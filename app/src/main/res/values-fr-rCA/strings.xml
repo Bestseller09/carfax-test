@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">carfax-test</string>
+    <string name="error_text">Une erreur s\'est produite lors du chargement des données.</string>
+</resources>

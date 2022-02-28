@@ -5,13 +5,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.amine.carfax_test.R
-import com.amine.carfax_test.network.model.ListingsModel
+import com.amine.carfax_test.models.ListingsModel
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.recycler_list_row.view.*
+import java.text.NumberFormat
+import java.util.*
 
 class HomePageAdapter : RecyclerView.Adapter<HomePageAdapter.MyViewHolder>() {
 
@@ -25,7 +26,7 @@ class HomePageAdapter : RecyclerView.Adapter<HomePageAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: HomePageAdapter.MyViewHolder, position: Int) {
-        Log.e("BookList",""+Gson().toJson(carListData))
+        Log.d("HomePageAdapter",""+Gson().toJson(carListData))
         holder.bind(carListData[position])
     }
 
@@ -42,30 +43,29 @@ class HomePageAdapter : RecyclerView.Adapter<HomePageAdapter.MyViewHolder>() {
 
     class   MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
-        val year = view.findViewById<TextView>(R.id.year)
-        val make = view.findViewById<TextView>(R.id.make)
-        val model = view.findViewById<TextView>(R.id.model)
-        val trim = view.findViewById<TextView>(R.id.trim)
-        val price = view.findViewById<TextView>(R.id.price)
-        val mileage = view.findViewById<TextView>(R.id.mileage)
-        val city = view.findViewById<TextView>(R.id.city)
-        val state = view.findViewById<TextView>(R.id.state)
-        val thumbImageView = view.findViewById<ImageView>(R.id.thumbImageView)
+        val year = view.year
+        val make = view.make
+        val model = view.model
+        val trim = view.trim
+        val price = view.price
+        val mileage = view.mileage
+        val city = view.city
+        val state = view.state
+        val thumbImageView = view.thumbImageView
 
         fun bind(data: ListingsModel){
             year.text = data.year.toString()
             make.text = data.make
             model.text = data.model
             trim.text = data.trim
-            price.text = data.currentPrice.toString()
-            mileage.text = data.mileage.toString()
+            price.text = "$ " + NumberFormat.getNumberInstance(Locale.US).format(data.currentPrice);
+            mileage.text = data.mileage.toString() + " mi"
             city.text = data.dealer?.city
             state.text = data.dealer?.state
 
             val url  = data.images?.firstPhoto?.large
             Glide.with(thumbImageView)
                 .load(url)
-//                .circleCrop()
                 .into(thumbImageView)
         }
     }

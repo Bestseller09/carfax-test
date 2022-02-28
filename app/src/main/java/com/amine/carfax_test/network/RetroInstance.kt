@@ -7,11 +7,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetroInstance {
 
     companion object {
-            val baseURL = "https://carfax-for-consumers.firebaseio.com/"
+            val BASE_URL = "https://carfax-for-consumers.firebaseio.com/"
 
         fun getRetroInstance() : Retrofit {
             return Retrofit.Builder()
-                .baseUrl(baseURL)
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
