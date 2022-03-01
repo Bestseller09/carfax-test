@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    >
 
 
 
@@ -39,7 +39,7 @@
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
-                    android:insetLeft="0dp"
+                    android:insetLeft="-15dp"
                     android:insetTop="0dp"
                     android:insetRight="0dp"
                     android:insetBottom="0dp"
@@ -59,6 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="50dp"
                     android:src="@drawable/carfax"
                     android:padding="0dp"
                     />

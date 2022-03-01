@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">carfax-test</string>
     <string name="error_text">An error occurred while loading data.</string>
+    <string name="vehicle_info">Vehicle Info</string>
+    <string name="call_dealer">call dealer</string>
+    <string name="fuel">Fuel</string>
+    <string name="engine">Engine</string>
+    <string name="body_style">Body Style</string>
+    <string name="transmission">Transmission</string>
+    <string name="driver_type">Drive Type</string>
+    <string name="interior_color">Interior Color</string>
+    <string name="exterior_color">Exterior Color</string>
+    <string name="location">Location</string>
 </resources>

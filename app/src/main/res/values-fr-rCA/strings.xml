@@ -2,4 +2,14 @@
 <resources>
     <string name="app_name">carfax-test</string>
     <string name="error_text">Une erreur s\'est produite lors du chargement des données.</string>
+    <string name="vehicle_info">Informations sur le véhicule</string>
+    <string name="call_dealer">appeler le concessionnaire</string>
+    <string name="fuel">Carburant</string>
+    <string name="engine">Moteur</string>
+    <string name="body_style">Style de carrosserie</string>
+    <string name="transmission">Transmission</string>
+    <string name="driver_type">Type de lecteur</string>
+    <string name="interior_color">Couleur intérieure</string>
+    <string name="exterior_color">Couleur extérieure</string>
+    <string name="location">Emplacement</string>
 </resources>

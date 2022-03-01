@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.amine.carfax_test.FragmentsUtil
 import com.amine.carfax_test.R
+import com.google.android.material.button.MaterialButton
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.home_page_fragment.*
 
@@ -33,6 +34,8 @@ class HomePageFragment : Fragment() {
         // instantiate viewmodel
         viewModel = ViewModelProvider(this).get(HomePageViewModel::class.java)
 
+        activity?.findViewById<MaterialButton>(R.id.btn_back)?.visibility = View.INVISIBLE
+
         initViews(rootView)
         startObserver()
 
@@ -49,11 +52,13 @@ class HomePageFragment : Fragment() {
             carListAdapter = HomePageAdapter()
             adapter = carListAdapter
         }
+
         view?.findViewById<SwipeRefreshLayout>(R.id.swipeRefreshLayout)?.setOnRefreshListener {
             Log.d("HomePageFragment", "SWIPE")
             swipeRefreshLayout.isRefreshing = false
             loadAPIData()
         }
+
     }
 
     private fun startObserver() {

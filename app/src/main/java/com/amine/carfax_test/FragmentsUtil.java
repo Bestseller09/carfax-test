@@ -2,6 +2,7 @@ package com.amine.carfax_test;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -67,5 +68,13 @@ public class FragmentsUtil {
         Fragment myFragment = Objects.requireNonNull(ApplicationActivity.get()).getSupportFragmentManager().findFragmentByTag(fragmentTag);
         return myFragment != null && myFragment.isVisible();
     }
+
+    /** The common case - just pop the back stack when the back button is touched. */
+    public static void setBackPopStack(@NonNull Fragment fragment) {
+        FragmentManager fm = fragment.getActivity().getSupportFragmentManager();
+        fm.popBackStack();
+    }
+
+
 
 }

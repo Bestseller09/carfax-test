@@ -5,115 +5,138 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/thumbImageView"
+    <LinearLayout
+        android:id="@+id/layout_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:adjustViewBounds="true"
-        tools:src="@drawable/abarth124spider" />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/year"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/thumbImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/abarth124spider" />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2011"
-            android:textColor="@color/pure_black"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-           />
-        <TextView
-            android:id="@+id/make"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BMW"
-            android:textColor="@color/pure_black"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            android:id="@+id/model"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3 Series"
-            android:textColor="@color/pure_black"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            android:id="@+id/trim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="328i"
-            android:textColor="@color/pure_black"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$ 17,234"
-            android:textColor="@color/pure_black"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            />
-        <TextView
-            android:id="@+id/separe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="|"
-            android:textColor="@color/pure_black"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            />
-        <TextView
-            android:id="@+id/mileage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="39.1k mi"
-            android:textColor="@color/pure_black"
-            android:layout_marginTop="5dp"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Highland Park,"
-            android:textColor="@color/pure_black"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            />
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2011"
+                        android:textColor="@color/pure_black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                       />
+                    <TextView
+                        android:id="@+id/make"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BMW"
+                        android:textColor="@color/pure_black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/model"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 Series"
+                        android:textColor="@color/pure_black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/trim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="328i"
+                        android:textColor="@color/pure_black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 17,234"
+                        android:textColor="@color/pure_black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/separe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="|"
+                        android:textColor="@color/pure_black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/mileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="39.1k mi"
+                        android:textColor="@color/pure_black"
+                        android:layout_marginTop="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Highland Park,"
+                        android:textColor="@color/pure_black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        />
 
-        <TextView
-            android:id="@+id/state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IL"
-            android:textColor="@color/pure_black"
-            android:layout_marginTop="5dp"
-            />
+                    <TextView
+                        android:id="@+id/state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IL"
+                        android:textColor="@color/pure_black"
+                        android:layout_marginTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140px"
+                android:src="@drawable/ic__arrow_right"
+                android:layout_gravity="center_vertical|right"
+                />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -126,7 +149,7 @@
             app:backgroundTint="@color/colorPrimary"
             android:textColor="@color/pure_white"
             android:layout_margin="10dp"
-            android:text="CALL DEALER"/>
+            android:text="@string/call_dealer"/>
     </LinearLayout>
 
 
